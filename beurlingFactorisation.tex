@@ -1,0 +1,339 @@
+\documentclass{beamer}
+
+\usepackage[english]{babel}
+\usepackage{metalogo}
+\usepackage{listings}
+\usepackage{fontspec}
+\usepackage{tikz}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{question}[theorem]{Question}
+
+\numberwithin{equation}{subsection}
+
+
+% section symbol
+%\renewcommand{\thesection}{\S\arabic{section}}
+
+% \renewcommand{\Pr}{{\bf Pr}}
+% \newcommand{\Prx}{\mathop{\bf Pr\/}}
+% \newcommand{\E}{{\bf E}}
+% \newcommand{\Ex}{\mathop{\bf E\/}}
+% \newcommand{\Var}{{\bf Var}}
+% \newcommand{\Varx}{\mathop{\bf Var\/}}
+% \newcommand{\Cov}{{\bf Cov}}
+% \newcommand{\Covx}{\mathop{\bf Cov\/}}
+
+% shortcuts for symbol names that are too long to type
+\newcommand{\eps}{\epsilon}
+\newcommand{\lam}{\lambda}
+\renewcommand{\l}{\ell}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+
+% % "blackboard-fonted" letters for the reals, naturals etc.
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathbb D}
+\newcommand{\T}{\mathbb T}
+
+% % operators that should be typeset in Roman font
+% \newcommand{\poly}{\mathrm{poly}}
+% \newcommand{\polylog}{\mathrm{polylog}}
+% \newcommand{\sgn}{\mathrm{sgn}}
+% \newcommand{\avg}{\mathop{\mathrm{avg}}}
+% \newcommand{\val}{{\mathrm{val}}}
+
+% % complexity classes
+% \renewcommand{\P}{\mathrm{P}}
+% \newcommand{\NP}{\mathrm{NP}}
+% \newcommand{\BPP}{\mathrm{BPP}}
+% \newcommand{\DTIME}{\mathrm{DTIME}}
+% \newcommand{\ZPTIME}{\mathrm{ZPTIME}}
+% \newcommand{\BPTIME}{\mathrm{BPTIME}}
+% \newcommand{\NTIME}{\mathrm{NTIME}}
+
+% values associated to optimization algorithm instances
+\newcommand{\Opt}{{\mathsf{Opt}}}
+\newcommand{\Alg}{{\mathsf{Alg}}}
+\newcommand{\Lp}{{\mathsf{Lp}}}
+\newcommand{\Sdp}{{\mathsf{Sdp}}}
+\newcommand{\Exp}{{\mathsf{Exp}}}
+
+% if you think the sum and product signs are too big in your math mode; x convention
+% as in the probability operators
+\newcommand{\littlesum}{{\textstyle \sum}}
+\newcommand{\littlesumx}{\mathop{{\textstyle \sum}}}
+\newcommand{\littleprod}{{\textstyle \prod}}
+\newcommand{\littleprodx}{\mathop{{\textstyle \prod}}}
+
+
+% calligraphic letters
+\newcommand{\calA}{{\cal A}}
+\newcommand{\calB}{{\cal B}}
+\newcommand{\calC}{{\cal C}}
+\newcommand{\calD}{{\cal D}}
+\newcommand{\calE}{{\cal E}}
+\newcommand{\calF}{{\cal F}}
+\newcommand{\calG}{{\cal G}}
+\newcommand{\calH}{{\cal H}}
+\newcommand{\calI}{{\cal I}}
+\newcommand{\calJ}{{\cal J}}
+\newcommand{\calK}{{\cal K}}
+\newcommand{\calL}{{\cal L}}
+\newcommand{\calM}{{\cal M}}
+\newcommand{\calN}{{\cal N}}
+\newcommand{\calO}{{\cal O}}
+\newcommand{\calP}{{\cal P}}
+\newcommand{\calQ}{{\cal Q}}
+\newcommand{\calR}{{\cal R}}
+\newcommand{\calS}{{\cal S}}
+\newcommand{\calT}{{\cal T}}
+\newcommand{\calU}{{\cal U}}
+\newcommand{\calV}{{\cal V}}
+\newcommand{\calW}{{\cal W}}
+\newcommand{\calX}{{\cal X}}
+\newcommand{\calY}{{\cal Y}}
+\newcommand{\calZ}{{\cal Z}}
+
+% proof
+%\renewcommand{\qedsymbol}{$\ddot\smile$}
+
+
+% bold letters (useful for random variables)
+%----------------------------------------------
+% \renewcommand{\a}{{\boldsymbol a}}
+% \renewcommand{\b}{{\boldsymbol b}}
+% \renewcommand{\c}{{\boldsymbol c}}
+% \renewcommand{\d}{{\boldsymbol d}}
+% \newcommand{\e}{{\boldsymbol e}}
+% \newcommand{\f}{{\boldsymbol f}}
+% \newcommand{\g}{{\boldsymbol g}}
+% \newcommand{\h}{{\boldsymbol h}}
+% \renewcommand{\i}{{\boldsymbol i}}
+% \renewcommand{\j}{{\boldsymbol j}}
+% \renewcommand{\k}{{\boldsymbol k}}
+% \newcommand{\m}{{\boldsymbol m}}
+% \newcommand{\n}{{\boldsymbol n}}
+% \renewcommand{\o}{{\boldsymbol o}}
+% \newcommand{\p}{{\boldsymbol p}}
+% \newcommand{\q}{{\boldsymbol q}}
+% \renewcommand{\r}{{\boldsymbol r}}
+% \newcommand{\s}{{\boldsymbol s}}
+% \renewcommand{\t}{{\boldsymbol t}}
+% \renewcommand{\u}{{\boldsymbol u}}
+% \renewcommand{\v}{{\boldsymbol v}}
+% \newcommand{\w}{{\boldsymbol w}}
+% \newcommand{\x}{{\boldsymbol x}}
+% \newcommand{\y}{{\boldsymbol y}}
+% \newcommand{\z}{{\boldsymbol z}}
+% \newcommand{\A}{{\boldsymbol A}}
+% \newcommand{\B}{{\boldsymbol B}}
+% \newcommand{\C}{{\boldsymbol C}}
+% \newcommand{\D}{{\boldsymbol D}}
+% \newcommand{\E}{{\boldsymbol E}}
+% \newcommand{\F}{{\boldsymbol F}}
+% \newcommand{\G}{{\boldsymbol G}}
+% \renewcommand{\H}{{\boldsymbol H}}
+% \newcommand{\I}{{\boldsymbol I}}
+% \newcommand{\J}{{\boldsymbol J}}
+% \newcommand{\K}{{\boldsymbol K}}
+% \renewcommand{\L}{{\boldsymbol L}}
+% \newcommand{\M}{{\boldsymbol M}}
+% \renewcommand{\O}{{\boldsymbol O}}
+% \renewcommand{\P}{{\mathbb{P}}}
+% \newcommand{\Q}{{\boldsymbol Q}}
+% \newcommand{\R}{{\boldsymbol R}}
+% \renewcommand{\S}{{\boldsymbol S}}
+% \newcommand{\T}{{\boldsymbol T}}
+% \newcommand{\U}{{\boldsymbol U}}
+% \newcommand{\V}{{\boldsymbol V}}
+% \newcommand{\W}{{\boldsymbol W}}
+% \newcommand{\X}{{\boldsymbol X}}
+% \newcommand{\Y}{{\boldsymbol Y}}
+% \newcommand{\Z}{{\boldsymbol Z}}
+
+% script letters
+\newcommand{\scrA}{{\mathscr A}}
+\newcommand{\scrB}{{\mathscr B}}
+\newcommand{\scrC}{{\mathscr C}}
+\newcommand{\scrD}{{\mathscr D}}
+\newcommand{\scrE}{{\mathscr E}}
+\newcommand{\scrF}{{\mathscr F}}
+\newcommand{\scrG}{{\mathscr G}}
+\newcommand{\scrH}{{\mathscr H}}
+\newcommand{\scrI}{{\mathscr I}}
+\newcommand{\scrJ}{{\mathscr J}}
+\newcommand{\scrK}{{\mathscr K}}
+\newcommand{\scrL}{{\mathscr L}}
+\newcommand{\scrM}{{\mathscr M}}
+\newcommand{\scrN}{{\mathscr N}}
+\newcommand{\scrO}{{\mathscr O}}
+\newcommand{\scrP}{{\mathscr P}}
+\newcommand{\scrQ}{{\mathscr Q}}
+\newcommand{\scrR}{{\mathscr R}}
+\newcommand{\scrS}{{\mathscr S}}
+\newcommand{\scrT}{{\mathscr T}}
+\newcommand{\scrU}{{\mathscr U}}
+\newcommand{\scrV}{{\mathscr V}}
+\newcommand{\scrW}{{\mathscr W}}
+\newcommand{\scrX}{{\mathscr X}}
+\newcommand{\scrY}{{\mathscr Y}}
+\newcommand{\scrZ}{{\mathscr Z}}
+
+\newcommand{\im}{{\text{im }}}
+\newcommand{\ip}[1]{\left\langle #1 \right\rangle}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+
+
+\usetheme{Nord}
+% \usetheme[style=light]{Nord}
+
+%\setmainfont{JetBrains Mono Regular}
+%\setsansfont{JetBrains Mono Regular}
+%\setmonofont{JetBrains Mono Regular}
+
+%\setmainfont{Noto Sans Regular}
+%\setsansfont{Noto Sans Regular}
+%\setmonofont{Noto Sans Mono Regular}
+
+\AtBeginSection[]
+{
+  \begin{frame}[c,noframenumbering,plain]
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/show/hide]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+  \begin{frame}[c,noframenumbering,plain]
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
+  \end{frame}
+}
+
+\title{Beurling Factorisation of Hardy Spaces}
+\subtitle{Final Presentation}
+\author{Ashish Kujur}
+%\institute{Indian Institute of Science Education and Research}
+\date{16th May, 2023}
+
+\begin{document}
+ \begin{frame}[plain,noframenumbering]
+   \maketitle
+ \end{frame}
+
+
+ \begin{frame}{Notation and Conventions}
+     \begin{itemize}
+	     \pause
+	 \item (Open Unit Disc) $\D = \left\{ z\in \C : \abs{z} < 1 \right\}$.
+	     \pause
+	 \item (Unit Circle) $\T = \left\{ z\in \C : \abs{z}=1 \right\}$.
+	     \pause
+	 \item $\T$ has the normalised Lebesgue measure $\frac{dt}{2\pi}$ unless specified otherwise.
+\pause
+	 \item $\calM \left( \T \right)$: Banach space of complex measures on $\T$ with the total variation norm.
+	     \pause
+	 \item \textit{nth Fourier coefficient} of $f\in \calL ^{1}\left( \T \right)$ and $\mu \in \calM \left( \T \right)$, $n\in \Z$:
+	     \begin{equation*}
+		 \hat{f}(n) := \frac{1}{2\pi} \int_{-\pi}^{\pi} f\left( e^{it} \right) e^{-int} dt.
+	     \end{equation*}
+	     \begin{equation*}
+		 \hat{\mu} \left( n \right) := \int_{\T} e^{-int} d\mu \left( e^{it} \right).
+	     \end{equation*}
+	     \pause
+	 \item $H\left( \D \right) = \left\{ f : \D \to \C : f \text{ is holomorphic on } \D \right\}$ \\
+	     $h\left( \D \right) = \left\{ f: \D \to \C : f \text{ is harmonic in } \D \right\}$.
+     \end{itemize}
+ \end{frame}
+
+ \begin{frame}{Hardy Spaces on $\D$}{(F. Riesz (1923))}
+     \pause
+     Let $1\le p \le \infty$ and $f\in H \left( \D \right)$.
+
+\pause 
+For $0\le r < 1$, define $f_{r} : \T \to \C$, $f_{r} \left( e^{i\theta} \right) = f\left( re^{i\theta} \right)$ for each $e^{i\theta} \in \T$.
+     \pause
+
+     Define $H^{p} \left( \D \right)$, \textit{Hardy class of analytic functions}, by 
+     \begin{equation*}
+	 H^{p} \left( \D \right) = \left\{ f\in H\left( \D \right) : \left\{ \norm{f_{r}}_{p} \right\}_{0\le r < 1} \text{ is bounded} \right\} 
+     \end{equation*}
+\pause
+\begin{theorem}[G.H. Hardy, 1915]
+	 If $f\in H^{p} \left( \D \right)$ then
+	     $\norm{f_{r_{1}}}_{p} \le \norm{f_{r_{2}}}_{p}$
+	 for $0 < r_{1} \le r_{2} < 1$.
+	 \label{thm:increasing-norm}
+     \end{theorem}
+\pause
+     \begin{theorem}
+	 For $1\le p < \infty$, $H^{p} \left( \D \right)$ is a Banach space with the norm
+	 \begin{equation*}
+	     \norm{f}_{p}:=\sup_{0< r < 1} \norm{f_r}_{p} = \lim_{r \to 1} \norm{f_{r}}_{p}.
+	 \end{equation*}
+	 \label{thm:HpD-Banach}
+     \end{theorem}
+ \end{frame}
+
+ \begin{frame}{Hardy Spaces on $\T$}
+     \pause
+     Let $1 \le p \le \infty$. Consider the measure space $\left( \T, \calB\left( \T \right), dt/2\pi \right)$. 
+     \pause
+     Define
+     $H^{p} \left( \T \right) = \left\{ f\in L^{p} \left( \T \right) : \hat{f}\left( n \right) = 0 \text{ for each } n<0 \right\}$.
+     
+     \pause
+     $H^{p}\left( \T \right)$ is a Banach space. \pause (Why?)
+
+     \pause
+     \begin{question}
+	 $H^{p} \left( \D \right)$ and $H^{p}\left( \T \right)$ are both Banach spaces. Are they related?
+     \end{question}
+     \pause
+     \begin{center}
+     YES!
+ \end{center}
+ \end{frame}
+
+ \begin{frame}{Poisson Kernel \& Integral}{(Recover!)}
+     \only<1>{\begin{definition}[Poisson Kernel]
+	 For each $r\in [0,1)$, we define $P_{r} : \T \to \R$ by
+	 \begin{equation*}
+	     P_{r} \left( e^{it} \right) = \frac{1-r^{2}}{1+r^{2}-2r\cos t}
+	 \end{equation*}
+ \end{definition}}
+     
+     \only<2>{\begin{definition}[Poisson Integral]
+	 Let $\mu \in \calM \left( \T \right)$ and $f\in L^{1}\left( \T \right)$. Then Poisson integral of $\mu$, denoted by $P\left[ \mu \right] : \D \to \C$ is given by
+	 \begin{equation*}
+	     P\left[ \mu \right] \left( re^{i\theta} \right) = \int_{\T} P_{r}\left( e^{i\left( \theta-t \right)} \right) d\mu \left( e^{it} \right)
+	 \end{equation*}
+	 and Poisson integral of $f$, denoted by $P\left[ f \right]: \D \to \C$ is given by
+	 \begin{equation*}
+	     P\left[ f \right] \left( re^{i\theta} \right) = \frac{1}{2\pi} \int_{-\pi}^{\pi} P_{r} \left( e^{i\left( \theta-t \right)} \right)f\left( e^{i\theta} \right)  dt.
+	 \end{equation*}
+
+     \label{def:Poisson-Integral-Measure}
+     \end{definition}}
+ \end{frame}
+
+ \begin{frame}{Representation Theorems}{(Recovery)}
+     Let $u \in h\left( \D \right)$. Then $u$ is a Poisson integral of
+     \begin{enumerate}
+	 \item hello
+     \end{enumerate}
+ \end{frame}
+\end{document}
