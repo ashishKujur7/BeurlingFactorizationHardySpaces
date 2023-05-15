@@ -1,0 +1,5 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'innerOuterFactorization.tex.blg'
+[105] biber:340> INFO - === Mon May 15, 2023, 09:23:20
+[304] Utils.pm:399> ERROR - Cannot find 'innerOuterFactorization.tex.bcf'!
+[304] Biber.pm:135> INFO - ERRORS: 1

@@ -1,0 +1,295 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{ash2014complex}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4cc13081ef3f444fd0731693a93840dd}{%
+           family={Ash},
+           familyi={A\bibinitperiod},
+           given={Robert\bibnamedelima B},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{4cc13081ef3f444fd0731693a93840dd}
+      \strng{fullhash}{4cc13081ef3f444fd0731693a93840dd}
+      \strng{bibnamehash}{4cc13081ef3f444fd0731693a93840dd}
+      \strng{authorbibnamehash}{4cc13081ef3f444fd0731693a93840dd}
+      \strng{authornamehash}{4cc13081ef3f444fd0731693a93840dd}
+      \strng{authorfullhash}{4cc13081ef3f444fd0731693a93840dd}
+      \field{labelalpha}{Ash14}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Complex variables}
+      \field{year}{2014}
+      \true{nocite}
+    \endentry
+    \entry{beurling1949two}{article}{}
+      \name{author}{1}{}{%
+        {{hash=986f6c9cde9cf2e82f92aedbc6fc519b}{%
+           family={Beurling},
+           familyi={B\bibinitperiod},
+           given={Arne},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{986f6c9cde9cf2e82f92aedbc6fc519b}
+      \strng{fullhash}{986f6c9cde9cf2e82f92aedbc6fc519b}
+      \strng{bibnamehash}{986f6c9cde9cf2e82f92aedbc6fc519b}
+      \strng{authorbibnamehash}{986f6c9cde9cf2e82f92aedbc6fc519b}
+      \strng{authornamehash}{986f6c9cde9cf2e82f92aedbc6fc519b}
+      \strng{authorfullhash}{986f6c9cde9cf2e82f92aedbc6fc519b}
+      \field{labelalpha}{Beu49}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On two problems concerning linear transformations in Hilbert space}
+      \field{year}{1949}
+    \endentry
+    \entry{blaschke1915erweiterung}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c00007a430abf3cde863327cfbbf656b}{%
+           family={Blaschke},
+           familyi={B\bibinitperiod},
+           given={Wilhelm},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{c00007a430abf3cde863327cfbbf656b}
+      \strng{fullhash}{c00007a430abf3cde863327cfbbf656b}
+      \strng{bibnamehash}{c00007a430abf3cde863327cfbbf656b}
+      \strng{authorbibnamehash}{c00007a430abf3cde863327cfbbf656b}
+      \strng{authornamehash}{c00007a430abf3cde863327cfbbf656b}
+      \strng{authorfullhash}{c00007a430abf3cde863327cfbbf656b}
+      \field{labelalpha}{Bla15}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Leipzig Ber}
+      \field{title}{Eine erweiterung des satzes von vitali über folgen analytischer funktionen}
+      \field{volume}{67}
+      \field{year}{1915}
+      \field{pages}{194\bibrangedash 200}
+      \range{pages}{7}
+    \endentry
+    \entry{cohn2013measure}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0e18d124f44a7b172b35b12d39c91d04}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={Donald\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{0e18d124f44a7b172b35b12d39c91d04}
+      \strng{fullhash}{0e18d124f44a7b172b35b12d39c91d04}
+      \strng{bibnamehash}{0e18d124f44a7b172b35b12d39c91d04}
+      \strng{authorbibnamehash}{0e18d124f44a7b172b35b12d39c91d04}
+      \strng{authornamehash}{0e18d124f44a7b172b35b12d39c91d04}
+      \strng{authorfullhash}{0e18d124f44a7b172b35b12d39c91d04}
+      \field{labelalpha}{Coh13}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Measure theory}
+      \field{volume}{1}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{fatou1906series}{article}{}
+      \name{author}{1}{}{%
+        {{hash=38d8d632f19afe27bf28281e720f296e}{%
+           family={Fatou},
+           familyi={F\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{38d8d632f19afe27bf28281e720f296e}
+      \strng{fullhash}{38d8d632f19afe27bf28281e720f296e}
+      \strng{bibnamehash}{38d8d632f19afe27bf28281e720f296e}
+      \strng{authorbibnamehash}{38d8d632f19afe27bf28281e720f296e}
+      \strng{authornamehash}{38d8d632f19afe27bf28281e720f296e}
+      \strng{authorfullhash}{38d8d632f19afe27bf28281e720f296e}
+      \field{labelalpha}{Fat06}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta mathematica}
+      \field{number}{1}
+      \field{title}{Séries trigonométriques et séries de Taylor}
+      \field{volume}{30}
+      \field{year}{1906}
+      \field{pages}{335\bibrangedash 400}
+      \range{pages}{66}
+    \endentry
+    \entry{hardy1915mean}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1a9a56942da5903febab078548b161f4}{%
+           family={Hardy},
+           familyi={H\bibinitperiod},
+           given={Godfrey\bibnamedelima H},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{1a9a56942da5903febab078548b161f4}
+      \strng{fullhash}{1a9a56942da5903febab078548b161f4}
+      \strng{bibnamehash}{1a9a56942da5903febab078548b161f4}
+      \strng{authorbibnamehash}{1a9a56942da5903febab078548b161f4}
+      \strng{authornamehash}{1a9a56942da5903febab078548b161f4}
+      \strng{authorfullhash}{1a9a56942da5903febab078548b161f4}
+      \field{labelalpha}{Har15}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the London Mathemathical Society}
+      \field{number}{1}
+      \field{title}{The mean value of the modulus of an analytic function}
+      \field{volume}{2}
+      \field{year}{1915}
+      \field{pages}{269\bibrangedash 277}
+      \range{pages}{9}
+    \endentry
+    \entry{herglotz1911uber}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9d5bd0e62d48b5fcf9a988f3c322e475}{%
+           family={Herglotz},
+           familyi={H\bibinitperiod},
+           given={Gustav},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d5bd0e62d48b5fcf9a988f3c322e475}
+      \strng{fullhash}{9d5bd0e62d48b5fcf9a988f3c322e475}
+      \strng{bibnamehash}{9d5bd0e62d48b5fcf9a988f3c322e475}
+      \strng{authorbibnamehash}{9d5bd0e62d48b5fcf9a988f3c322e475}
+      \strng{authornamehash}{9d5bd0e62d48b5fcf9a988f3c322e475}
+      \strng{authorfullhash}{9d5bd0e62d48b5fcf9a988f3c322e475}
+      \field{labelalpha}{Her11}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ber. Verhandl. Sachs Akad. Wiss. Leipzig, Math.-Phys. Kl.}
+      \field{title}{Uber potenzreihen mit positivem, reelen teil im einheitskreis}
+      \field{volume}{63}
+      \field{year}{1911}
+      \field{pages}{501\bibrangedash 511}
+      \range{pages}{11}
+    \endentry
+    \entry{hoffman2007banach}{book}{}
+      \name{author}{1}{}{%
+        {{hash=70bba88d762755f400208620fb79ce6b}{%
+           family={Hoffman},
+           familyi={H\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{70bba88d762755f400208620fb79ce6b}
+      \strng{fullhash}{70bba88d762755f400208620fb79ce6b}
+      \strng{bibnamehash}{70bba88d762755f400208620fb79ce6b}
+      \strng{authorbibnamehash}{70bba88d762755f400208620fb79ce6b}
+      \strng{authornamehash}{70bba88d762755f400208620fb79ce6b}
+      \strng{authorfullhash}{70bba88d762755f400208620fb79ce6b}
+      \field{labelalpha}{Hof07}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Banach spaces of analytic functions}
+      \field{year}{2007}
+      \true{nocite}
+    \endentry
+    \entry{mashreghi2009representation}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ae4a619de9fab7620b9bfb1f9be1cc49}{%
+           family={Mashreghi},
+           familyi={M\bibinitperiod},
+           given={Javad},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ae4a619de9fab7620b9bfb1f9be1cc49}
+      \strng{fullhash}{ae4a619de9fab7620b9bfb1f9be1cc49}
+      \strng{bibnamehash}{ae4a619de9fab7620b9bfb1f9be1cc49}
+      \strng{authorbibnamehash}{ae4a619de9fab7620b9bfb1f9be1cc49}
+      \strng{authornamehash}{ae4a619de9fab7620b9bfb1f9be1cc49}
+      \strng{authorfullhash}{ae4a619de9fab7620b9bfb1f9be1cc49}
+      \field{labelalpha}{Mas09}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Representation theorems in Hardy spaces}
+      \field{volume}{74}
+      \field{year}{2009}
+      \true{nocite}
+    \endentry
+    \entry{riesz1923randwerte}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fc1868e13c15de8f16066fefc5c0f5de}{%
+           family={Riesz},
+           familyi={R\bibinitperiod},
+           given={Freidrich},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fc1868e13c15de8f16066fefc5c0f5de}
+      \strng{fullhash}{fc1868e13c15de8f16066fefc5c0f5de}
+      \strng{bibnamehash}{fc1868e13c15de8f16066fefc5c0f5de}
+      \strng{authorbibnamehash}{fc1868e13c15de8f16066fefc5c0f5de}
+      \strng{authornamehash}{fc1868e13c15de8f16066fefc5c0f5de}
+      \strng{authorfullhash}{fc1868e13c15de8f16066fefc5c0f5de}
+      \field{labelalpha}{Rie23}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematische Zeitschrift}
+      \field{number}{1}
+      \field{title}{Über die Randwerte einer analytischen Funktion}
+      \field{volume}{18}
+      \field{year}{1923}
+      \field{pages}{87\bibrangedash 95}
+      \range{pages}{9}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

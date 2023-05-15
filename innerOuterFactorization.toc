@@ -1,0 +1,5 @@
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{Notations}{2}{0}{1}
+\beamer@sectionintoc {2}{Hardy Spaces}{7}{0}{2}
+\beamer@sectionintoc {3}{$H^{1}$ is nice!}{33}{0}{3}
+\beamer@sectionintoc {4}{The Factorization}{36}{0}{4}
